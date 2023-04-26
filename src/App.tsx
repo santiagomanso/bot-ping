@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Container from './components/Container'
+import Input from './components/Input'
+import Button from './components/Button'
+import Status from './components/Status'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <section className='flex flex-col gap-1 max-w-lg w-full '>
+        <Input />
+        <div className='flex w-full gap-1'>
+          <Status />
+          <Button />
+        </div>
+      </section>
+    </Container>
+  )
 }
 
-export default App;
+export default App
